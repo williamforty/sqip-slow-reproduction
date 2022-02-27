@@ -14,42 +14,29 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to this reproduction program!
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
+        <p className={styles.description}>This repo has two api routes. One of them is slow, which is expected even running locally, but it is extremely slow when running in production.</p>
+        <p>
+          The two routes are:
+        </p>
+        <p>
+          <code className={styles.code}><a href="/api/apple">/api/apple</a></code> - this proves that the image can be loaded and served very fast.
+        </p>
+        <p>
+          <code className={styles.code}><a href="/api/apple-sqip">/api/apple-sqip</a></code> - this shows the difference in speed when running locally vs. running in production. Locally it takes around 6 seconds, but on production takes much longer, to the point of the entire api call timing out.
         </p>
 
+        <br />
+        <br />
+
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="https://github.com/williamforty/sqip-slow-reproduction" className={styles.card}>
+            <h2>View the GitHub Repository &rarr;</h2>
+            <p>Take a look at the source code for this NextJs application</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
       </main>
 
