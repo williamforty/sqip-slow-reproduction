@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         </p>
         <p>
           <code className={styles.code}>
-            <Link href="/api/apple-sqip">
+            <Link href="/api/apple-sqip?primatives=100">
               <a>/api/apple-sqip?primatives=100</a>
             </Link>
           </code>{" "}
