@@ -40,6 +40,14 @@ const Home: NextPage = () => {
           in production. Locally it takes around 6 seconds, but on production
           takes much longer, to the point of the entire api call timing out.
         </p>
+        <p>
+          <code className={styles.code}>
+            <Link href="/api/apple-sqip">
+              <a>/api/apple-sqip?primatives=100</a>
+            </Link>
+          </code>{" "}
+          - a quicker example - takes around 1 second running locally, but around 45 seconds on production.
+        </p>
 
         <br />
         <br />
