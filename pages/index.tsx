@@ -1,7 +1,8 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -13,30 +14,44 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to this reproduction program!
-        </h1>
+        <h1 className={styles.title}>Welcome to this reproduction program!</h1>
 
-        <p className={styles.description}>This repo has two api routes. One of them is slow, which is expected even running locally, but it is extremely slow when running in production.</p>
+        <p className={styles.description}>
+          This repo has two api routes. One of them is slow, which is expected
+          even running locally, but it is extremely slow when running in
+          production.
+        </p>
+        <p>The two routes are:</p>
         <p>
-          The two routes are:
+          <code className={styles.code}>
+            <Link href="/api/apple">
+              <a>/api/apple</a>
+            </Link>
+          </code>{" "}
+          - this proves that the image can be loaded and served very fast.
         </p>
         <p>
-          <code className={styles.code}><a href="/api/apple">/api/apple</a></code> - this proves that the image can be loaded and served very fast.
-        </p>
-        <p>
-          <code className={styles.code}><a href="/api/apple-sqip">/api/apple-sqip</a></code> - this shows the difference in speed when running locally vs. running in production. Locally it takes around 6 seconds, but on production takes much longer, to the point of the entire api call timing out.
+          <code className={styles.code}>
+            <Link href="/api/apple-sqip">
+              <a>/api/apple-sqip</a>
+            </Link>
+          </code>{" "}
+          - this shows the difference in speed when running locally vs. running
+          in production. Locally it takes around 6 seconds, but on production
+          takes much longer, to the point of the entire api call timing out.
         </p>
 
         <br />
         <br />
 
         <div className={styles.grid}>
-          <a href="https://github.com/williamforty/sqip-slow-reproduction" className={styles.card}>
+          <a
+            href="https://github.com/williamforty/sqip-slow-reproduction"
+            className={styles.card}
+          >
             <h2>View the GitHub Repository &rarr;</h2>
             <p>Take a look at the source code for this NextJs application</p>
           </a>
-
         </div>
       </main>
 
@@ -46,14 +61,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
