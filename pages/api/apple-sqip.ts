@@ -7,9 +7,11 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<string>
 ) {
+  const { primatives } = req.query
+
   const result = sqip({
     filename: path.resolve('.', 'apple.jpg'),
-    numberOfPrimitives: 500,
+    numberOfPrimitives: primatives || 500,
     mode: 1,
     blur: 0,
   });
